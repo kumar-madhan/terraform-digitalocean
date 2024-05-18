@@ -22,6 +22,7 @@ resource "digitalocean_droplet" "server" {
   
   # SSH key configuration
   ssh_keys = [data.digitalocean_ssh_key.existing_key.id]
+  user_data = file("script.sh")
 
 
   provisioner "remote-exec" {
