@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         // Define environment variables
-        DO_TOKEN = credentials('digitalocean-token') // Replace with your actual Jenkins credentials ID for DigitalOcean token
+        DO_TOKEN = credentials('digitalocean') // Replace with your actual Jenkins credentials ID for DigitalOcean token
         TF_VAR_do_token = "${DO_TOKEN}"
         TF_DIR = "/var/jenkins_home/terraform/plans" // Change this path based on your Jenkins setup
         MACHINE_NAME = "Server-${env.BUILD_NUMBER}"
