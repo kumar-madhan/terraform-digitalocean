@@ -83,7 +83,7 @@ pipeline {
                     // Destroy Terraform-managed infrastructure for the specified build number
                     dir('terraform') {
                         // Use the tfplan file to destroy the infrastructure
-                        sh "terraform apply -destroy -input=false ${TF_DIR}/tfplan-${params.BUILD_NUMBER_TO_DESTROY}"
+                        sh "terraform destroy -input=false ${TF_DIR}/tfplan-${params.BUILD_NUMBER_TO_DESTROY}"
                     }
                 }
             }
