@@ -101,7 +101,7 @@ pipeline {
                     // Run Ansible playbook
                     dir('ansible') {
                         sh """
-                        ansible-playbook -i ${dropletIP}, -u root --private-key ~/.ssh/id_rsa playbook.yml
+                        ansible-playbook -i ${dropletIP}, -u root --private-key ~/.ssh/id_rsa playbook-1.yaml
                         """
                     }
                 }
