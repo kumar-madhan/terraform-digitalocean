@@ -52,7 +52,7 @@ pipeline {
                     dir('terraform') {
                         sh """
                         terraform plan -var "do_token=${DO_TOKEN}" \
-                              -var "Machine_Name=${MACHINE_NAME}"
+                              -var "Machine_Name=${MACHINE_NAME}" \
                               -out=${TF_DIR}/tfplan-${env.BUILD_NUMBER}
                         """
                     }
