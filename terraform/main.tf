@@ -2,13 +2,9 @@
 variable "do_token" {}
 variable "Machine_Name" {}
 # Create a new tag
+
 resource "digitalocean_tag" "server" {
   name = "admin"
-}
-
-# Configure the DigitalOcean provider
-provider "digitalocean" {
-  token = var.do_token
 }
 
 data "digitalocean_ssh_key" "existing_key" {

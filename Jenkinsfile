@@ -24,7 +24,7 @@ pipeline {
                     doGenerateSubmoduleConfigurations: false, 
                     extensions: [[$class: 'CleanCheckout']], 
                     submoduleCfg: [], 
-                    userRemoteConfigs: [[credentialsId: 'GitHub', url: 'git@github.com:kumar-madhan/provisioner-1.git']]
+                    userRemoteConfigs: [[credentialsId: 'GitHub', url: 'git@github.com:kumar-madhan/terraform-digitalocean.git']]
                 ])
             }
         }
